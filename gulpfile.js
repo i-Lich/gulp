@@ -2,7 +2,7 @@ const gulp = require('gulp');
 const autoprefixer = require('gulp-autoprefixer');
 const concat = require('gulp-concat');
 const cleanCSS = require('gulp-clean-css');
-const uglify = require('gulp-uglify');
+const terser = require('gulp-terser');
 const del = require('del');
 const sass = require('gulp-sass');
 sass.compiler = require('node-sass');
@@ -49,11 +49,11 @@ function styles() {
 
 function scripts() {
     return gulp.src(jsFiles)
+        .pipe(sourcemaps.init())
         .pipe(concat('script.js'))
         //минификация
-        .pipe(uglify({
-            toplevel: true
-        }))
+        .pipe(terser())
+        .pipe(sourcemaps.write('./'))
         //выходная папка для JS файла
         .pipe(gulp.dest('./build/js'))
         .pipe(browserSync.stream());
