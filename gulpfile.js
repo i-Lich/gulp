@@ -15,8 +15,12 @@ const browserSync = require('browser-sync').create();
 
 //scss файлы
 const cssFiles = [
-    './src/scss/main.scss',
-    './src/scss/media.scss'
+    './src/scss/_vars.scss',
+    './src/scss/_fonts.scss',
+    './src/scss/_libs.scss',
+    './src/scss/_global.scss',
+    './src/scss/_media.scss',
+    './src/scss/main.scss'
 ]
 
 //js файлы

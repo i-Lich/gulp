@@ -1,14 +1,10 @@
-$blue: #3bbfce;
+@import "vars";
+@import "libs";
+@import "fonts";
+@import "global";
 
-a{
-    color: #cccccc;
-}
-.row{
-    display: flex;
-}
-p{
-    color: $blue;
-}
-h1{
-    color: $blue;
-}
+
+
+
+
+@import "media";
