@@ -15,19 +15,14 @@ const browserSync = require('browser-sync').create();
 
 //scss файлы
 const cssFiles = [
-    './src/scss/_vars.scss',
-    './src/scss/_fonts.scss',
-    './src/scss/_libs.scss',
-    './src/scss/_global.scss',
-    './src/scss/_media.scss',
     './src/scss/main.scss'
-]
+];
 
 //js файлы
 const jsFiles = [
     './src/js/lib.js',
     './src/js/main.js'
-]
+];
 //стили
 function styles() {
     return gulp.src(cssFiles)
